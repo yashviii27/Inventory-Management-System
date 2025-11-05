@@ -66,6 +66,8 @@ It allows businesses to manage **Products, Suppliers, Purchases, Sales, Customer
 
 🧩 Start the backend:
 npm run dev 👉 http://localhost:5000
+
+
 🧩 Start the frontend:
 npm start 👉 http://localhost:3000
  
