@@ -64,5 +64,12 @@ It allows businesses to manage **Products, Suppliers, Purchases, Sales, Customer
 
 ---
 
-## 🧩 Folder Structure
+## 🧩 Start the backend:
+
+npm run dev
+
+## 🧩 Start the frontend:
+
+npm start
+
 
