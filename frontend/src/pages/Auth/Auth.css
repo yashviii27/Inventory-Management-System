@@ -1,0 +1,169 @@
+/* Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #c3e0ff, #f8f9fa);
+}
+
+/* Container (Center full screen) */
+.auth-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #c3e0ff, #f8f9fa);
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Smooth floating background animation */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #0d6efd33 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float1 6s ease-in-out infinite alternate;
+}
+
+.auth-container::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #6f42c133 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  border-radius: 50%;
+  animation: float2 8s ease-in-out infinite alternate;
+}
+
+@keyframes float1 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(50px, 30px); }
+}
+@keyframes float2 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-40px, -30px); }
+}
+
+/* Card styling */
+.auth-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: #ffffffcc;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover glow effect */
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(13, 110, 253, 0.2);
+}
+
+/* Titles */
+.auth-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  margin-bottom: 1.5rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* Form */
+.auth-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #212529;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Input focus animation */
+.auth-form input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  background: linear-gradient(135deg, #0d6efd, #007bff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(135deg, #0b5ed7, #0056b3);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.auth-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.auth-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.auth-link:hover {
+  text-decoration: underline;
+  color: #084298;
+}
+
+/* Error message */
+.error-msg {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  background: #f8d7da;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
